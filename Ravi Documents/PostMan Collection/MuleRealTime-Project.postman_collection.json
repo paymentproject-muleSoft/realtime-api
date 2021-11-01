@@ -1,0 +1,271 @@
+{
+	"info": {
+		"_postman_id": "143dc2e4-209c-46ca-a604-68341915ea62",
+		"name": "MuleRealTime-Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Local TravelOnTipCall Routes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "transactionId",
+						"value": "eytwr8765-uryt0985-5346tryf-yrt7trh6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:9081/travelOnTipCall/routes",
+					"host": [
+						"localhost"
+					],
+					"port": "9081",
+					"path": [
+						"travelOnTipCall",
+						"routes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local TravelOnTipCall Schedules",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "transactionId",
+						"value": "eytwr8765-uryt0985-5346tryf-yrt7trh6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:9081/travelOnTipCall/schedules",
+					"host": [
+						"localhost"
+					],
+					"port": "9081",
+					"path": [
+						"travelOnTipCall",
+						"schedules"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local FastGoCall Routes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "transactionId",
+						"value": "eytwr8765-uryt0985-5346tryf-yrt7trh6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:9082/fastGoCall/routes",
+					"host": [
+						"localhost"
+					],
+					"port": "9082",
+					"path": [
+						"fastGoCall",
+						"routes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local TravelOnTip Routes SAPI",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "transactionId",
+						"value": "gshaf6457-uh67ry6t-uy67t5r6-rt67yrt6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:9083/api/Bus/TravelOnTip/routes",
+					"host": [
+						"localhost"
+					],
+					"port": "9083",
+					"path": [
+						"api",
+						"Bus",
+						"TravelOnTip",
+						"routes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local FastGoCall Schedules",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "transactionId",
+						"value": "eytwr8765-uryt0985-5346tryf-yrt7trh6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:9082/fastGoCall/schedules",
+					"host": [
+						"localhost"
+					],
+					"port": "9082",
+					"path": [
+						"fastGoCall",
+						"schedules"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local Bapi",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "transactionId",
+						"value": "gshaf6457-uh67ry6t-uy67t5r6-rt67yrt6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:9085/api/booking/Train/routes",
+					"host": [
+						"localhost"
+					],
+					"port": "9085",
+					"path": [
+						"api",
+						"booking",
+						"Train",
+						"routes"
+					],
+					"query": [
+						{
+							"key": "companyName",
+							"value": "TravelOnTip",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local TravelOnTip Scedules SAPI",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "transactionId",
+						"value": "gshaf6457-uh67ry6t-uy67t5r6-rt67yrt6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:9083/api/Bus/TravelOnTip/schedules?departureLocationCode= BEN-SG &destinationLocationCode= KLG-MY ",
+					"host": [
+						"localhost"
+					],
+					"port": "9083",
+					"path": [
+						"api",
+						"Bus",
+						"TravelOnTip",
+						"schedules"
+					],
+					"query": [
+						{
+							"key": "departureLocationCode",
+							"value": " BEN-SG "
+						},
+						{
+							"key": "destinationLocationCode",
+							"value": " KLG-MY "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local FastGo Routes SAPI",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "transactionId",
+						"value": "gshaf6457-uh67ry6t-uy67t5r6-rt67yrt6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:9084/api/Bus/FastGo/routes",
+					"host": [
+						"localhost"
+					],
+					"port": "9084",
+					"path": [
+						"api",
+						"Bus",
+						"FastGo",
+						"routes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local FastGo Schedules SAPI",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "transactionId",
+						"value": "gshaf6457-uh67ry6t-uy67t5r6-rt67yrt6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:9084/api/Bus/FastGo/schedules?departureLocationCode= BEN-SG &destinationLocationCode= KLG-MY ",
+					"host": [
+						"localhost"
+					],
+					"port": "9084",
+					"path": [
+						"api",
+						"Bus",
+						"FastGo",
+						"schedules"
+					],
+					"query": [
+						{
+							"key": "departureLocationCode",
+							"value": " BEN-SG "
+						},
+						{
+							"key": "destinationLocationCode",
+							"value": " KLG-MY "
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

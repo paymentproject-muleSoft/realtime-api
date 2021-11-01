@@ -1,0 +1,2 @@
+curl --location --request GET 'localhost:8081/api/payments/references' \
+--header 'x-abc-transactionId: 556c3124-48ca-4744-90c9-2c92e9669fa7'

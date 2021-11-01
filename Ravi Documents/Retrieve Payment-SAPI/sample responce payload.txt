@@ -1,0 +1,56 @@
+{
+    "retrievePaymentTransaction": [
+        {
+            "RESPONSECODE": "100",
+            "PAYMENTCURRENCYCODE": "USD",
+            "AMOUNT": 5000,
+            "PAYMENTMODE": "CREDIT",
+            "PAYMENTREFERENCEID": "ASGFHASGFJCAS",
+            "TRANSACTIONREFERENCEID": "TDGDBw387483",
+            "UPINUMBER": "SHGJHJAGHAGAG",
+            "DATETIMEOFTRANSACTION": "2020-04.01 12.23.41",
+            "DEBITCARDNUMBER": "7465-5647-8954",
+            "NAMEOFCUSTOMER": "ABC",
+            "CREDITCARDNUMBER": "7465-5647-8954"
+        },
+        {
+            "RESPONSECODE": "100",
+            "PAYMENTCURRENCYCODE": "USD",
+            "AMOUNT": 4500,
+            "PAYMENTMODE": "CREDIT",
+            "PAYMENTREFERENCEID": "FBHGSUIGIUSGG",
+            "TRANSACTIONREFERENCEID": "TDGDBw3467483",
+            "UPINUMBER": "FGDYGFYSDGFDH",
+            "DATETIMEOFTRANSACTION": "2020-04.02 14.15.41",
+            "DEBITCARDNUMBER": "7465-5647-8954",
+            "NAMEOFCUSTOMER": "ABC",
+            "CREDITCARDNUMBER": "7465-5647-8954"
+        },
+        {
+            "RESPONSECODE": "100",
+            "PAYMENTCURRENCYCODE": "USD",
+            "AMOUNT": 4500,
+            "PAYMENTMODE": "CREDIT",
+            "PAYMENTREFERENCEID": "FBHGSUIGIUSGG",
+            "TRANSACTIONREFERENCEID": "TDGDBw3467483",
+            "UPINUMBER": "SHGJHJAGHAGAG",
+            "DATETIMEOFTRANSACTION": "2020-04.02 14.15.41",
+            "DEBITCARDNUMBER": "7465-5647-8954",
+            "NAMEOFCUSTOMER": "ABC",
+            "CREDITCARDNUMBER": "7465-5647-8954"
+        },
+        {
+            "RESPONSECODE": "100",
+            "PAYMENTCURRENCYCODE": "USD",
+            "AMOUNT": 5000,
+            "PAYMENTMODE": "CREDIT",
+            "PAYMENTREFERENCEID": "ASGFHASGFJCAS",
+            "TRANSACTIONREFERENCEID": "TDGDBw387483",
+            "UPINUMBER": "SHGJHJAGHAGAG",
+            "DATETIMEOFTRANSACTION": "2020-04.01 12.23.41",
+            "DEBITCARDNUMBER": "7465-5647-8954",
+            "NAMEOFCUSTOMER": "ABC",
+            "CREDITCARDNUMBER": "7465-5647-8954"
+        }
+    ]
+}

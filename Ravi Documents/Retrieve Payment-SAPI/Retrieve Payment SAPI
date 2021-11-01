@@ -1,0 +1,64 @@
+Retrieve Payment SAPI
+
+Objective : This API will retrieve list of payment details from payment Table.
+
+#Operation
+
+1. Method : GET   
+2. Resource : payments 
+
+#input
+
+1. Header
+    a. x-abc-transactionId : String : MinLenght = 32 : MaxLength = 32 :  Required: True
+2. Query Parameter
+    a. fromDate : String : Required: false
+    b. toDate : String : Required: false
+    c. paymentReferenceId : String : Required: false
+
+#Output 
+
+1. Body :MIME-Type= application/json
+        a. retrievePaymentTransaction : Object : Required :True 
+        a. transactionReferenceId : String : Required = true 
+        b. responseCode : String : Required = true 
+        c. amount : Number : Required = true
+        d. paymentCurrencyCode : String : Required = true
+        e. dateTimeOfTransaction : String : Required = true
+        f. paymentMode : String : Required = true
+        g. CreditCardNumber : String : Required = false
+        h. debitCardNumber : String : Required = false
+        i. upiNumber : String : Required = false
+        j. NameOfCustomer : String : Required = true
+        k. paymentReferenceId : String : Required = true
+
+   Example: 
+        {
+            "retrievePaymentTransaction":
+            [{
+                "transactionReferenceId" : "TDGDBw387483",
+                "responseCode": "100",
+                "amount": 5000,
+                "paymentCurrencyCode" : "USD",
+                "dateTimeOfTransaction" : "2021-04-01 12:23:34",
+                "paymentMode" : "credit"
+                "CreditCardNumber" : "7465-7646-8734-7634",
+                "debitCardNumber" : "7465-7646-8734-7634",
+                "upiNumber" : "dsjfghsdgfjsdfjsgfwryti",
+                "NameOfCustomer" : "XYZ",
+                "paymentReferenceId" : "djshfsgde98598374"
+            },
+            {
+                "transactionReferenceId" : "TDGDBw387483",
+                "responseCode": "100",
+                "amount": 5000,
+                "paymentCurrencyCode" : "USD",
+                "dateTimeOfTransaction" : "2021-04-01 12:23:34",
+                "paymentMode" : "credit"
+                "CreditCardNumber" : "7465-7646-8734-7634",
+                "debitCardNumber" : "7465-7646-8734-7634",
+                "upiNumber" : "dsjfghsdgfjsdfjsgfwryti",
+                "NameOfCustomer" : "XYZ",
+                "paymentReferenceId" : "djshfsgde98598374"
+            }]
+        }

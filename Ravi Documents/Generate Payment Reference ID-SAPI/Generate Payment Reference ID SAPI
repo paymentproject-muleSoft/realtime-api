@@ -1,0 +1,52 @@
+Generate Payment Reference ID SAPI
+
+Objective : This API will generate unique paymemt reference ID.
+
+#Operation
+
+1. Method : GET   
+2. Resource : payments/references 
+
+#input
+
+1. Header
+    a. x-abc-transactionId : String : MinLenght = 36 : MaxLength = 36 :  Required: True
+    example: "01aa5159-94ce-4fc1-844a-7f495d5c5685"
+    b. x-abc-Content-Type :  Type: application/json :  Required: True
+    c. Accept : Type: application/json :  Required: True
+    
+#Output 
+200
+1. Body : object : MIME-Type: application/json
+        a. paymentReferenceId :   String : MinLenght = 30 : MaxLength= 40 : Required = true ,
+        example: "Payment132372364t7647wughfgjdf5"
+   Example: {
+                "paymentReferenceId" : "Payment132372364t7647wughfgjdf5"
+            }
+
+400
+1. Body : object : MIME-Type: application/json
+        a. errorCode : number : Required = true 
+        b. errorMessage : String : Required = true 
+   Example: {
+                "errorCode" : 400,
+                "errorMessage" : "BAD Request"
+            }
+
+401
+1. Body : object : MIME-Type: application/json
+        a. errorCode : number : Required = true 
+        b. errorMessage : String : Required = true 
+   Example: {
+                "errorCode" : 401,
+                "errorMessage" : "UnAuthorised"
+            }
+
+500
+1. Body : object : MIME-Type: application/json
+        a. errorCode : number : Required = true 
+        b. errorMessage : String : Required = true 
+   Example: {
+                "errorCode" : 500,
+                "errorMessage" : "Critical Error"
+            }

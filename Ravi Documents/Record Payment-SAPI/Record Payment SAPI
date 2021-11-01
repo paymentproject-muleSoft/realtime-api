@@ -1,0 +1,52 @@
+Record Payment SAPI
+
+Objective : This API will record payment details in payment DB.
+
+#Operation
+
+1. Method : POST   
+2. Resource : payments 
+
+#input
+
+1. Header
+    a. x-abc-transactionId : String : MinLenght = 32 : MaxLength = 32 :  Required: True
+2. Body : MIME-Type= application/json
+    a. recordPaymentTransaction : Object : Required :True 
+        a. transactionReferenceId : String : Required = true 
+        b. responseCode : String : Required = true 
+        c. amount : Number : Required = true
+        d. paymentCurrencyCode : String : Required = true
+        e. dateTimeOfTransaction : String : Required = true
+        f. paymentMode : String : Required = true
+        g. CreditCardNumber : String : Required = false
+        h. debitCardNumber : String : Required = false
+        i. upiNumber : String : Required = false
+        i. NameOfCustomer : String : Required = true
+        h. paymentReferenceId : String : Required = true
+    Example :
+        {
+            "recordPaymentTransaction":
+            {
+                "transactionReferenceId" : "TDGDBw387483",
+                "responseCode": "100",
+                "amount": 5000,
+                "paymentCurrencyCode" : "USD",
+                "dateTimeOfTransaction" : "2021-04-01 12:23:34",
+                "paymentMode" : "credit"
+                "CreditCardNumber" : "7465-7646-8734-7634",
+                "debitCardNumber" : "7465-7646-8734-7634",
+                "upiNumber" : "dsjfghsdgfjsdfjsgfwryti",
+                "NameOfCustomer" : "XYZ"
+            }
+        }
+
+#Output 
+
+1. Body :MIME-Type= application/json
+        a. responseCode  : Number :  Required = true 
+        b. responseMessage  : String :  Required = true
+   Example: {
+                "responseCode" : 200,
+                "responseMessage" : "Success"
+            }

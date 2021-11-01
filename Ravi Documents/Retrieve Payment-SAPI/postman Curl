@@ -1,0 +1,2 @@
+curl --location --request GET 'localhost:8083/api/payments?fromdate=2021-3-31&todate=2021-4-5&paymentReferenceId=100' \
+--header 'x-abc-transactionId: hdshhfgfg46d-hdshhfgfg46d-jgl451'

@@ -1,0 +1,94 @@
+#################
+MULE_ENV=yourName
+
+Note : config/${MULE_ENV}.yaml
+#################
+
+
+Install Mysql Server
+Notedown: host, port, username, password, schema
+
+
+
+
+
+#################
+
+
+INSERT INTO `sys`.`PAYMENT`
+(`TRANSACTIONREFERENCEID`,
+`RESPONSECODE`,
+`AMOUNT`,
+`PAYMENTCURRENCYCODE`,
+`DATETIMEOFTRANSACTION`,
+`PAYMENTMODE`,
+`CREDITCARDNUMBER`,
+`DEBITCARDNUMBER`,
+`UPINUMBER`,
+`NAMEOFCUSTOMER`,
+`PAYMENTREFERENCEID`)
+VALUES
+(:TRANSACTIONREFERENCEID,
+:RESPONSECODE,
+:AMOUNT,
+:PAYMENTCURRENCYCODE,
+:DATETIMEOFTRANSACTION,
+:PAYMENTMODE,
+:CREDITCARDNUMBER,
+:DEBITCARDNUMBER,
+:UPINUMBER,
+:NAMEOFCUSTOMER,
+:PAYMENTREFERENCEID);
+
+
+#################
+
+{
+    TRANSACTIONREFERENCEID : vars.requestPayload.recordPaymentTransaction.transactionReferenceId,
+    RESPONSECODE : vars.requestPayload.recordPaymentTransaction.responseCode,
+    AMOUNT : vars.requestPayload.recordPaymentTransaction.amount,
+    PAYMENTCURRENCYCODE : vars.requestPayload.recordPaymentTransaction.paymentCurrencyCode,
+    DATETIMEOFTRANSACTION : vars.requestPayload.recordPaymentTransaction.dateTimeOfTransaction,
+    PAYMENTMODE : vars.requestPayload.recordPaymentTransaction.paymentMode,
+    CREDITCARDNUMBER : vars.requestPayload.recordPaymentTransaction.creditCardNumber,
+    DEBITCARDNUMBER : vars.requestPayload.recordPaymentTransaction.debitCardNumber,
+    UPINUMBER : vars.requestPayload.recordPaymentTransaction.upiNumber,
+    NAMEOFCUSTOMER : vars.requestPayload.recordPaymentTransaction.nameOfCustomer,
+    PAYMENTREFERENCEID : vars.requestPayload.recordPaymentTransaction.paymentReferenceId
+}
+
+
+##################
+
+SELECT * FROM `sys`.`PAYMENT` where DATETIMEOFTRANSACTION BETWEEN :fromDate AND :toDate;
+
+
+##################
+
+{
+    fromDate: vars.requestQueryParam.fromDate,
+    toDate: vars.requestQueryParam.toDate
+}
+
+##################
+
+
+INSERT INTO PAYMENTREFERENCE
+(`PAYMENTREFERENCEID`)
+VALUES
+(:PAYMENTREFERENCEID);
+
+
+###################
+
+{
+    PAYMENTREFERENCEID: vars.paymentReferenceId
+}
+
+
+###################
+
+-XX:MetaspaceSize=1024m
+-XX:MaxMetaspaceSize=2048m
+
+###################

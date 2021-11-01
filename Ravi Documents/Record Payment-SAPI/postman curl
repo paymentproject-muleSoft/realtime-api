@@ -1,0 +1,20 @@
+curl --location --request POST 'http://localhost:8082/api/payments' \
+--header 'x-abc-transactionId: 01aa5159-94ce-4fc1-844a-7f495d5c5685' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+            "recordPaymentTransaction":
+            {
+                "transactionReferenceId" :  "TDGDBw387484",
+                "responseCode":  "100",
+                "amount":  6000,
+                "paymentCurrencyCode" :  "USD",
+                "dateTimeOfTransaction" :  "2021-04-01 12:23:34",
+                "paymentMode" :  "credit",
+                "CreditCardNumber" :  "7465-7646-8734-7634",
+                "debitCardNumber" :  "7465-7646-8734-7634",
+                "upiNumber" :  "dsjfghsdgfjsdfjsgfwryti",
+                "NameOfCustomer" :  "PQR",
+	            "PaymentReferenceId": "jdhsfjhd87646"	
+            }
+}
+'
